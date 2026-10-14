@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<title>Villa Alba · Planta baja · E 1:100 · cotas en metros</title>
+<desc>Planta generada desde la escena 3D de index.html. 1 m = 10 unidades (mm de papel a E 1:100). x este, z sur.</desc>
+<rect x="0" y="0" width="420" height="297" fill="#fff"/>
+<g fill="none" stroke="#000">
+<rect x="5" y="5" width="410" height="287" stroke-width="0.5"/>
+<g fill="#000" stroke="none">
+<rect x="26" y="24" width="300" height="2" />
+<rect x="26" y="26" width="2" height="238" />
+<rect x="324" y="26" width="2" height="238" />
+</g>
+<rect x="26" y="259" width="300" height="5" stroke-width="0.13" stroke="#000"/>
+<line x1="36" y1="264" x2="41" y2="259" stroke-width="0.13" />
+<line x1="46" y1="264" x2="51" y2="259" stroke-width="0.13" />
+<line x1="56" y1="264" x2="61" y2="259" stroke-width="0.13" />
+<line x1="66" y1="264" x2="71" y2="259" stroke-width="0.13" />
+<line x1="76" y1="264" x2="81" y2="259" stroke-width="0.13" />
+<line x1="86" y1="264" x2="91" y2="259" stroke-width="0.13" />
+<line x1="96" y1="264" x2="101" y2="259" stroke-width="0.13" />
+<line x1="106" y1="264" x2="111" y2="259" stroke-width="0.13" />
+<line x1="116" y1="264" x2="121" y2="259" stroke-width="0.13" />
+<line x1="126" y1="264" x2="131" y2="259" stroke-width="0.13" />
+<line x1="136" y1="264" x2="141" y2="259" stroke-width="0.13" />
+<line x1="146" y1="264" x2="151" y2="259" stroke-width="0.13" />
+<line x1="156" y1="264" x2="161" y2="259" stroke-width="0.13" />
+<line x1="166" y1="264" x2="171" y2="259" stroke-width="0.13" />
+<line x1="176" y1="264" x2="181" y2="259" stroke-width="0.13" />
+<line x1="186" y1="264" x2="191" y2="259" stroke-width="0.13" />
+<line x1="196" y1="264" x2="201" y2="259" stroke-width="0.13" />
+<line x1="206" y1="264" x2="211" y2="259" stroke-width="0.13" />
+<line x1="216" y1="264" x2="221" y2="259" stroke-width="0.13" />
+<line x1="226" y1="264" x2="231" y2="259" stroke-width="0.13" />
+<line x1="236" y1="264" x2="241" y2="259" stroke-width="0.13" />
+<line x1="246" y1="264" x2="251" y2="259" stroke-width="0.13" />
+<line x1="256" y1="264" x2="261" y2="259" stroke-width="0.13" />
+<line x1="266" y1="264" x2="271" y2="259" stroke-width="0.13" />
+<line x1="276" y1="264" x2="281" y2="259" stroke-width="0.13" />
+<line x1="286" y1="264" x2="291" y2="259" stroke-width="0.13" />
+<line x1="296" y1="264" x2="301" y2="259" stroke-width="0.13" />
+<line x1="306" y1="264" x2="311" y2="259" stroke-width="0.13" />
+<line x1="316" y1="264" x2="321" y2="259" stroke-width="0.13" />
+<text x="51" y="257.5" font-size="2" text-anchor="middle" font-weight="normal" fill="#000" stroke="none">Seto</text>
+<rect x="136" y="134" width="166" height="106" stroke-width="0.25" stroke="#000"/>
+<rect x="136" y="139" width="42" height="10" stroke-width="0.13" stroke="#000"/>
+<rect x="178.5" y="171.5" width="95" height="50" stroke-width="0.25" stroke="#000"/>
+<rect x="181" y="174" width="90" height="45" stroke-width="0.13" stroke="#000"/>
+<polygon points="42,50 286,50 286,157 140,157 140,208 42,208" stroke-width="0.25" stroke-dasharray="4 1.5" stroke="#000"/>
+<rect x="26" y="24" width="300" height="240" stroke-width="0.25" stroke="#000" stroke-dasharray="8 2 1 2"/>
+</g>
+<g fill="#000" stroke="none">
+<rect x="46" y="53" width="90" height="2" />
+<rect x="216" y="53" width="60" height="2" />
+<rect x="275" y="54" width="2" height="26" />
+<rect x="275" y="118" width="2" height="16" />
+<rect x="136" y="133" width="2" height="2" />
+<rect x="274" y="133" width="2" height="2" />
+<rect x="135" y="134" width="2" height="2" />
+<rect x="135" y="152" width="2" height="12" />
+<rect x="135" y="164" width="2" height="4" />
+<rect x="135" y="200" width="2" height="4" />
+<rect x="46" y="203" width="7" height="2" />
+<rect x="67" y="203" width="69" height="2" />
+<rect x="45" y="54" width="2" height="8" />
+<rect x="45" y="82" width="2" height="20" />
+<rect x="45" y="122" width="2" height="18" />
+<rect x="45" y="158" width="2" height="46" />
+<rect x="95" y="54" width="2" height="28" />
+<rect x="95" y="91" width="2" height="17" />
+<rect x="95" y="117" width="2" height="17" />
+<rect x="95" y="134" width="2" height="30" />
+<rect x="46" y="93" width="50" height="2" />
+<rect x="46" y="133" width="50" height="2" />
+<rect x="46" y="163" width="23" height="2" />
+<rect x="78" y="163" width="23" height="2" />
+<rect x="111" y="163" width="25" height="2" />
+<rect x="123" y="54" width="2" height="25" />
+<rect x="96" y="78" width="6" height="2" />
+<rect x="110" y="78" width="14" height="2" />
+<rect x="96" y="133" width="5" height="2" />
+<rect x="124" y="133" width="12" height="2" />
+<rect x="45" y="53" width="2" height="2" />
+<rect x="275" y="53" width="2" height="2" />
+<rect x="275" y="133" width="2" height="2" />
+<rect x="45" y="203" width="2" height="2" />
+<rect x="135" y="203" width="2" height="2" />
+</g>
+<g fill="none" stroke="#000">
+<line x1="136" y1="53.5" x2="216" y2="53.5" stroke-width="0.13" />
+<line x1="136" y1="54.5" x2="216" y2="54.5" stroke-width="0.13" />
+<line x1="275.5" y1="80" x2="275.5" y2="118" stroke-width="0.13" />
+<line x1="276.5" y1="80" x2="276.5" y2="118" stroke-width="0.13" />
+<line x1="138" y1="133.5" x2="274" y2="133.5" stroke-width="0.13" />
+<line x1="138" y1="134.5" x2="274" y2="134.5" stroke-width="0.13" />
+<line x1="135.5" y1="168" x2="135.5" y2="200" stroke-width="0.13" />
+<line x1="136.5" y1="168" x2="136.5" y2="200" stroke-width="0.13" />
+<line x1="53" y1="203.5" x2="67" y2="203.5" stroke-width="0.13" />
+<line x1="53" y1="204.5" x2="67" y2="204.5" stroke-width="0.13" />
+<line x1="45.5" y1="62" x2="45.5" y2="82" stroke-width="0.13" />
+<line x1="46.5" y1="62" x2="46.5" y2="82" stroke-width="0.13" />
+<line x1="45.5" y1="102" x2="45.5" y2="122" stroke-width="0.13" />
+<line x1="46.5" y1="102" x2="46.5" y2="122" stroke-width="0.13" />
+<line x1="45.5" y1="140" x2="45.5" y2="158" stroke-width="0.13" />
+<line x1="46.5" y1="140" x2="46.5" y2="158" stroke-width="0.13" />
+</g><g fill="#000" stroke="none">
+<rect x="283.3" y="154.3" width="1.4" height="1.4" />
+<rect x="209.3" y="154.3" width="1.4" height="1.4" />
+<rect x="120" y="151.4" width="15.5" height="0.6" />
+</g><g fill="none" stroke="#000">
+<path d="M 136 136 A 16 16 0 0 0 120 152" stroke-width="0.13"/>
+<line x1="226" y1="55" x2="226" y2="133" stroke-width="0.13" stroke-dasharray="2 1.2"/>
+</g>
+<g fill="#000" stroke="none">
+<text x="166" y="93" font-size="2.7" text-anchor="middle" font-weight="bold" >Salón-comedor</text>
+<text x="166" y="97" font-size="2.4000000000000004" text-anchor="middle" font-weight="normal" >93,6 m²</text>
+<text x="250.5" y="93" font-size="2.7" text-anchor="middle" font-weight="bold" >Cocina</text>
+<text x="250.5" y="97" font-size="2.4000000000000004" text-anchor="middle" font-weight="normal" >38,2 m²</text>
+<text x="109" y="147.5" font-size="2.7" text-anchor="middle" font-weight="bold" >Recibidor</text>
+<text x="109" y="151.5" font-size="2.4000000000000004" text-anchor="middle" font-weight="normal" >10,6 m²</text>
+<text x="91" y="183" font-size="2.7" text-anchor="middle" font-weight="bold" >Suite principal</text>
+<text x="91" y="187" font-size="2.4000000000000004" text-anchor="middle" font-weight="normal" >33,4 m²</text>
+<text x="72" y="147.5" font-size="2.7" text-anchor="middle" font-weight="bold" >Baño suite</text>
+<text x="72" y="151.5" font-size="2.4000000000000004" text-anchor="middle" font-weight="normal" >14,0 m²</text>
+<text x="72" y="73" font-size="2.7" text-anchor="middle" font-weight="bold" >Dormitorio 2</text>
+<text x="72" y="77" font-size="2.4000000000000004" text-anchor="middle" font-weight="normal" >19,0 m²</text>
+<text x="72" y="113" font-size="2.7" text-anchor="middle" font-weight="bold" >Dormitorio 3</text>
+<text x="72" y="117" font-size="2.4000000000000004" text-anchor="middle" font-weight="normal" >19,0 m²</text>
+<text x="110" y="64" font-size="2.2" text-anchor="middle" font-weight="bold" >Baño 2</text>
+<text x="110" y="68" font-size="1.9000000000000001" text-anchor="middle" font-weight="normal" >6,0 m²</text>
+<text x="206" y="148.5" font-size="2.3" text-anchor="middle" font-weight="normal" >Porche  32,1 m²</text>
+<text x="287" y="194" font-size="2.3" text-anchor="middle" font-weight="normal" >Solárium</text>
+<text x="226" y="195" font-size="2.7" text-anchor="middle" font-weight="bold" >Piscina</text>
+<text x="226" y="199.5" font-size="2.2" text-anchor="middle" font-weight="normal" >9,00 × 4,50 m  ·  40,5 m²</text>
+<text x="156" y="48" font-size="1.9" text-anchor="middle" font-weight="normal" >Cubierta (vuelo 0,30 m; porche hasta z = 1,30 y x = 11,00)</text>
+<text x="156" y="38.5" font-size="2.3" text-anchor="middle" font-weight="bold" >Parcela 30,00 × 24,00 m  ·  720 m²</text>
+<text x="153" y="137" font-size="1.8" text-anchor="middle" font-weight="normal" >Acceso</text>
+</g>
+<g fill="#000" stroke="#000">
+<line x1="46" y1="246" x2="136" y2="246" stroke-width="0.13" />
+<line x1="46" y1="205" x2="46" y2="247.2" stroke-width="0.13" />
+<line x1="44.8" y1="247.2" x2="47.2" y2="244.8" stroke-width="0.25"/>
+<line x1="136" y1="205" x2="136" y2="247.2" stroke-width="0.13" />
+<line x1="134.8" y1="247.2" x2="137.2" y2="244.8" stroke-width="0.25"/>
+<text x="91" y="245.1" font-size="2.3" text-anchor="middle" font-weight="normal" stroke="none">9,00</text>
+<line x1="136" y1="246" x2="276" y2="246" stroke-width="0.13" />
+<line x1="136" y1="205" x2="136" y2="247.2" stroke-width="0.13" />
+<line x1="134.8" y1="247.2" x2="137.2" y2="244.8" stroke-width="0.25"/>
+<line x1="276" y1="135" x2="276" y2="247.2" stroke-width="0.13" />
+<line x1="274.8" y1="247.2" x2="277.2" y2="244.8" stroke-width="0.25"/>
+<text x="206" y="245.1" font-size="2.3" text-anchor="middle" font-weight="normal" stroke="none">14,00</text>
+<line x1="45" y1="253" x2="277" y2="253" stroke-width="0.13" />
+<line x1="45" y1="205" x2="45" y2="254.2" stroke-width="0.13" />
+<line x1="43.8" y1="254.2" x2="46.2" y2="251.8" stroke-width="0.25"/>
+<line x1="277" y1="135" x2="277" y2="254.2" stroke-width="0.13" />
+<line x1="275.8" y1="254.2" x2="278.2" y2="251.8" stroke-width="0.25"/>
+<text x="161" y="252.1" font-size="2.3" text-anchor="middle" font-weight="normal" stroke="none">23,20</text>
+<line x1="308" y1="54" x2="308" y2="134" stroke-width="0.13" />
+<line x1="278" y1="54" x2="309.2" y2="54" stroke-width="0.13" />
+<line x1="306.8" y1="55.2" x2="309.2" y2="52.8" stroke-width="0.25"/>
+<line x1="278" y1="134" x2="309.2" y2="134" stroke-width="0.13" />
+<line x1="306.8" y1="135.2" x2="309.2" y2="132.8" stroke-width="0.25"/>
+<text x="307.1" y="94" font-size="2.3" text-anchor="middle" font-weight="normal" transform="rotate(-90 307.1 94)" stroke="none">8,00</text>
+<line x1="308" y1="134" x2="308" y2="204" stroke-width="0.13" />
+<line x1="278" y1="134" x2="309.2" y2="134" stroke-width="0.13" />
+<line x1="306.8" y1="135.2" x2="309.2" y2="132.8" stroke-width="0.25"/>
+<line x1="303" y1="204" x2="309.2" y2="204" stroke-width="0.13" />
+<line x1="306.8" y1="205.2" x2="309.2" y2="202.8" stroke-width="0.25"/>
+<text x="307.1" y="169" font-size="2.3" text-anchor="middle" font-weight="normal" transform="rotate(-90 307.1 169)" stroke="none">7,00</text>
+<line x1="315" y1="53" x2="315" y2="205" stroke-width="0.13" />
+<line x1="278" y1="53" x2="316.2" y2="53" stroke-width="0.13" />
+<line x1="313.8" y1="54.2" x2="316.2" y2="51.8" stroke-width="0.25"/>
+<line x1="303" y1="205" x2="316.2" y2="205" stroke-width="0.13" />
+<line x1="313.8" y1="206.2" x2="316.2" y2="203.8" stroke-width="0.25"/>
+<text x="314.1" y="129" font-size="2.3" text-anchor="middle" font-weight="normal" transform="rotate(-90 314.1 129)" stroke="none">15,20</text>
+<line x1="26" y1="12" x2="326" y2="12" stroke-width="0.13" />
+<line x1="26" y1="24" x2="26" y2="13.2" stroke-width="0.13" />
+<line x1="24.8" y1="13.2" x2="27.2" y2="10.8" stroke-width="0.25"/>
+<line x1="326" y1="24" x2="326" y2="13.2" stroke-width="0.13" />
+<line x1="324.8" y1="13.2" x2="327.2" y2="10.8" stroke-width="0.25"/>
+<text x="176" y="11.1" font-size="2.6" text-anchor="middle" font-weight="normal" stroke="none">30,00</text>
+<line x1="14" y1="24" x2="14" y2="264" stroke-width="0.13"/>
+<line x1="24" y1="24" x2="12.8" y2="24" stroke-width="0.13" />
+<line x1="12.8" y1="25.2" x2="15.2" y2="22.8" stroke-width="0.25"/>
+<line x1="24" y1="264" x2="12.8" y2="264" stroke-width="0.13" />
+<line x1="12.8" y1="265.2" x2="15.2" y2="262.8" stroke-width="0.25"/>
+<text x="13.1" y="144" font-size="2.6" text-anchor="middle" font-weight="normal" transform="rotate(-90 13.1 144)" stroke="none">24,00</text>
+</g>
+<g fill="none" stroke="#000">
+<circle cx="380.0" cy="44.0" r="14" stroke-width="0.25"/>
+<polygon points="380.0,31.0 375.0,53.0 380.0,48.0" fill="#000" stroke="none"/>
+<polygon points="380.0,31.0 385.0,53.0 380.0,48.0" fill="#fff" stroke="#000" stroke-width="0.13"/>
+<text x="380.0" y="28.0" font-size="5" text-anchor="middle" font-weight="bold" fill="#000" stroke="none">N</text>
+<rect x="345.0" y="71" width="14" height="2" fill="#000" stroke="none"/>
+<text x="363.0" y="72.8" font-size="2.2" fill="#000" stroke="none">Muro 0,20 m (poché)</text>
+<line x1="345.0" y1="78" x2="359.0" y2="78" stroke-width="0.25" stroke-dasharray="4 1.5"/>
+<text x="363.0" y="78.8" font-size="2.2" fill="#000" stroke="none">Cubierta y vuelo</text>
+<line x1="345.0" y1="84" x2="359.0" y2="84" stroke-width="0.25" stroke-dasharray="8 2 1 2"/>
+<text x="363.0" y="84.8" font-size="2.2" fill="#000" stroke="none">Límite de parcela</text>
+<line x1="345.0" y1="90" x2="359.0" y2="90" stroke-width="0.25" stroke-dasharray="2 1.2"/>
+<text x="363.0" y="90.8" font-size="2.2" fill="#000" stroke="none">Separación rotulado (no hay muro)</text>
+<line x1="345.0" y1="95.5" x2="359.0" y2="95.5" stroke-width="0.13"/><line x1="345.0" y1="96.5" x2="359.0" y2="96.5" stroke-width="0.13"/>
+<text x="363.0" y="96.8" font-size="2.2" fill="#000" stroke="none">Ventana / vidriera (doble línea)</text>
+<text x="345.0" y="100" font-size="2.6" font-weight="bold" fill="#000" stroke="none">Notas</text>
+<text x="345.0" y="104.5" font-size="2.1" fill="#000" stroke="none">1. Salón-comedor y cocina forman un único espacio</text>
+<text x="348.5" y="108.1" font-size="2.1" fill="#000" stroke="none">en el modelo; la línea discontinua en x = 5,00</text>
+<text x="348.5" y="111.69999999999999" font-size="2.1" fill="#000" stroke="none">los separa solo para rotular (cocina al este).</text>
+<text x="345.0" y="116.49999999999999" font-size="2.1" fill="#000" stroke="none">2. El recibidor es una sala cerrada; se abre al salón</text>
+<text x="348.5" y="120.09999999999998" font-size="2.1" fill="#000" stroke="none">por un paso sin hoja de 2,30 m (x = -7,50 a -5,20)</text>
+<text x="348.5" y="123.69999999999997" font-size="2.1" fill="#000" stroke="none">en el muro del eje z = -1. El baño 2 lo cierran</text>
+<text x="348.5" y="127.29999999999997" font-size="2.1" fill="#000" stroke="none">tabiques oscuros; su puerta da al salón.</text>
+<text x="345.0" y="132.09999999999997" font-size="2.1" fill="#000" stroke="none">3. Superficies netas medidas a caras interiores</text>
+<text x="348.5" y="135.69999999999996" font-size="2.1" fill="#000" stroke="none">de muros (e = 0,20 m, centrados en los ejes).</text>
+<text x="348.5" y="139.29999999999995" font-size="2.1" fill="#000" stroke="none">Recinto del baño 2 descontado del salón.</text>
+<text x="345.0" y="144.09999999999994" font-size="2.1" fill="#000" stroke="none">4. La ventana alta de fachada norte (antepecho</text>
+<text x="348.5" y="147.69999999999993" font-size="2.1" fill="#000" stroke="none">2,25 m, h = 0,50 m) queda por encima del plano</text>
+<text x="348.5" y="151.29999999999993" font-size="2.1" fill="#000" stroke="none">de corte y se grafía como ventana por</text>
+<text x="348.5" y="154.89999999999992" font-size="2.1" fill="#000" stroke="none">homogeneidad con el resto.</text>
+<text x="345.0" y="159.6999999999999" font-size="2.1" fill="#000" stroke="none">5. Hoja pivotante de entrada dibujada abierta 90°</text>
+<text x="348.5" y="163.2999999999999" font-size="2.1" fill="#000" stroke="none">hacia el interior (hueco 1,60 m).</text>
+<text x="345.0" y="168.09999999999988" font-size="2.1" fill="#000" stroke="none">6. Ejes: x crece al este, z al sur; origen en el</text>
+<text x="348.5" y="171.69999999999987" font-size="2.1" fill="#000" stroke="none">centro de la parcela. Cotas en metros.</text>
+<text x="345.0" y="229.0" font-size="2.4" font-weight="bold" fill="#000" stroke="none">Escala gráfica</text>
+<rect x="348" y="232.0" width="10" height="2" fill="#000" stroke="#000" stroke-width="0.25"/>
+<rect x="358" y="232.0" width="10" height="2" fill="#fff" stroke="#000" stroke-width="0.25"/>
+<rect x="368" y="232.0" width="30" height="2" fill="#000" stroke="#000" stroke-width="0.25"/>
+<text x="348" y="238.0" font-size="2.2" text-anchor="middle" fill="#000" stroke="none">0</text>
+<text x="358" y="238.0" font-size="2.2" text-anchor="middle" fill="#000" stroke="none">1</text>
+<text x="368" y="238.0" font-size="2.2" text-anchor="middle" fill="#000" stroke="none">2</text>
+<text x="398" y="238.0" font-size="2.2" text-anchor="middle" fill="#000" stroke="none">5 m</text>
+<rect x="345.0" y="244.0" width="70.0" height="43.0" stroke-width="0.5"/>
+<line x1="345.0" y1="261.0" x2="415.0" y2="261.0" stroke-width="0.25"/>
+<line x1="345.0" y1="271.0" x2="415.0" y2="271.0" stroke-width="0.25"/>
+<text x="348.0" y="252.0" font-size="7" font-weight="bold" fill="#000" stroke="none">VILLA ALBA</text>
+<text x="348.0" y="258.0" font-size="4" fill="#000" stroke="none">Planta baja</text>
+<text x="348.0" y="267.0" font-size="2.1" fill="#000" stroke="none">Villa Alba · Planta baja · E 1:100 · cotas en metros</text>
+<text x="348.0" y="277.0" font-size="2.3" fill="#000" stroke="none">Formato A3 apaisado · 1 m = 10 mm</text>
+<text x="348.0" y="281.5" font-size="2.3" fill="#000" stroke="none">Fuente: escena 3D de Villa Alba</text>
+<text x="348.0" y="285.5" font-size="2.3" fill="#000" stroke="none">Práctica de curso · material de partida</text>
+</g>
+</svg>

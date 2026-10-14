@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Villa Alba — tramos en vídeo</title>
+<style>
+  body { margin: 0; padding: 16px; background: #0b0a09; color: #f3eee5; font: 13px/1.4 system-ui, sans-serif; }
+  h1 { font-size: 16px; font-weight: 500; margin: 0 0 12px; }
+  h2 { font-size: 13px; font-weight: 500; color: #cfa96d; margin: 16px 0 6px; }
+  .strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
+  canvas { display: block; width: 100%; height: auto; background: #1a1612; }
+</style>
+<h1>Villa Alba — tramos en vídeo (seis fotogramas de cada uno)</h1>
+<div id="list"></div>
+<script>
+  // Muestra fotogramas repartidos por cada clip para revisar que la casa se mantiene coherente
+  const clips = ['t1-cenital-fachada', 't2-fachada-entrada', 't3-entrada-salon', 't4-piscina-aerea'];
+  const only = new URLSearchParams(location.search).get('c');
+  (async () => {
+    window.info = {};
+    for (const name of clips.filter(c => !only || c.startsWith(only))) {
+      const v = document.createElement('video'); v.muted = true; v.preload = 'auto'; v.src = 'video/' + name + '.mp4';
+      const ok = await new Promise(r => { v.onloadedmetadata = () => r(true); v.onerror = () => r(false); });
+      if (!ok) continue;
+      window.info[name] = [v.duration, v.videoWidth, v.videoHeight];
+      const h = document.createElement('h2'); h.textContent = `${name} · ${v.duration.toFixed(1)} s · ${v.videoWidth}×${v.videoHeight}`;
+      const strip = document.createElement('div'); strip.className = 'strip';
+      document.getElementById('list').append(h, strip);
+      for (let i = 0; i < 6; i++) {
+        v.currentTime = Math.min(v.duration - 0.05, v.duration * i / 5);
+        await new Promise(r => { v.onseeked = r; });
+        const c = document.createElement('canvas'); c.width = 640; c.height = Math.round(640 * v.videoHeight / v.videoWidth);
+        c.getContext('2d').drawImage(v, 0, 0, c.width, c.height); strip.append(c);
+      }
+    }
+    window.done = true;
+  })();
+</script>
+</html>

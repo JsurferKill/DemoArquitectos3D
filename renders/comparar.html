@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Villa Alba — maqueta y render</title>
+<style>
+  body { margin: 0; padding: 16px; background: #0b0a09; color: #f3eee5; font: 13px/1.4 system-ui, sans-serif; }
+  h1 { font-size: 16px; font-weight: 500; margin: 0 0 12px; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 14px; }
+  .row b { grid-column: 1 / -1; font-weight: 500; color: #cfa96d; }
+  img { display: block; width: 100%; height: auto; }
+</style>
+<h1>Villa Alba — maqueta (izquierda) y render (derecha)</h1>
+<div id="list"></div>
+<script>
+  const shots = ['01-cenital', '02-fachada', '03-entrada', '04-recibidor', '05-salon', '06-cocina', '07-suite', '08-bano', '09-dormitorio', '10-piscina', '11-aerea'];
+  document.getElementById('list').innerHTML = shots.map(s =>
+    `<div class="row"><b>${s}</b><img src="maqueta/${s}.jpg" alt="Maqueta ${s}"><img src="final/${s}.webp" alt="Render ${s}"></div>`).join('');
+</script>
+</html>

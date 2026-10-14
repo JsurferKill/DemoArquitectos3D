@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacidad y cookies — ZENIT</title>
+<meta name="description" content="Política de privacidad y cookies del sitio web de ZENIT, estudio de visualización arquitectónica. Borrador pendiente de revisión.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0a09'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' font-weight='700' text-anchor='middle' fill='%23cfa96d'%3EZ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0b0a09;
+    --panel: #141210;
+    --ink: #f3eee5;
+    --muted: #a39c90;
+    --line: rgba(243, 238, 229, 0.14);
+    --gold: #cfa96d;
+    --serif: "Instrument Serif", "Times New Roman", serif;
+    --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --gutter: clamp(20px, 5vw, 72px);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-wrap: break-word; }
+  a { color: inherit; text-decoration: none; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 400; margin: 0; line-height: 1.05; letter-spacing: -0.01em; }
+  h1 em { font-style: italic; color: var(--gold); }
+  p { margin: 0 0 1em; }
+  .eyebrow { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: inline-flex; align-items: center; gap: 12px; }
+  .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--gold); }
+  .nav { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; padding: 16px var(--gutter); background: rgba(11,10,9,.72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+  .logo { font: 600 15px var(--sans); letter-spacing: .34em; }
+  .logo i { font-style: normal; color: var(--gold); }
+  .nav .back { font-size: 13px; color: var(--muted); }
+  .nav .back:hover { color: var(--ink); }
+  main { width: min(70ch, 100% - 2 * var(--gutter)); margin: 0 auto; padding: 130px 0 80px; }
+  h1 { font-size: clamp(40px, 7vw, 68px); margin: 18px 0 28px; }
+  h2 { font-size: clamp(26px, 4vw, 34px); margin: 2.2em 0 .6em; padding-top: 1.2em; border-top: 1px solid var(--line); scroll-margin-top: 90px; }
+  h2 span { font-style: italic; color: var(--gold); margin-right: .35em; }
+  ul { padding-left: 1.2em; margin: 0 0 1em; }
+  li { margin-bottom: .4em; }
+  li::marker { color: var(--gold); }
+  .draft { border: 1px solid var(--gold); border-radius: 6px; background: var(--panel); padding: 16px 20px; margin: 0 0 8px; font-weight: 500; line-height: 1.5; }
+  .draft small { display: block; margin-top: 6px; font-weight: 400; font-size: 13px; color: var(--muted); }
+  .ph { color: var(--gold); font-weight: 500; }
+  .meta { color: var(--muted); font-size: 14px; }
+  .warn { border-left: 2px solid var(--gold); padding: 4px 0 4px 16px; margin: 0 0 1em; color: var(--muted); }
+  main a:not(.btn) { color: var(--gold); border-bottom: 1px solid var(--line); }
+  main a:not(.btn):hover { border-color: var(--gold); }
+  a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  dl { margin: 0 0 1em; border-top: 1px solid var(--line); }
+  dl div { display: grid; grid-template-columns: minmax(0, 11em) minmax(0, 1fr); gap: 4px 16px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  dt { color: var(--muted); font-size: 14px; }
+  dd { margin: 0; }
+  footer { border-top: 1px solid var(--line); padding: 28px var(--gutter); display: flex; flex-wrap: wrap; gap: 10px 28px; justify-content: space-between; font-size: 13px; color: var(--muted); }
+  footer nav { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+  footer a:hover { color: var(--ink); }
+  @media (max-width: 520px) { dl div { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="nav">
+  <a href="index.html" class="logo" aria-label="ZENIT, ir al inicio">ZEN<i>I</i>T</a>
+  <a href="index.html" class="back">&larr; Volver al inicio</a>
+</header>
+
+<main>
+  <p class="draft">Borrador. Este texto es una plantilla y debe revisarlo un profesional antes de publicar la web.<small>Los campos <span class="ph">[entre corchetes]</span> deben completarse con los datos reales del responsable.</small></p>
+
+  <p><span class="eyebrow">Protección de datos</span></p>
+  <h1>Política de <em>privacidad</em></h1>
+  <p class="meta">Última actualización: <span class="ph">[FECHA]</span></p>
+  <p>Esta política explica cómo se tratan los datos personales que se facilitan a través de este sitio web, conforme al Reglamento (UE) 2016/679 (RGPD, art. 13) y a la Ley Orgánica 3/2018, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD). Para el uso de cookies, véase la sección <a href="#cookies">Cookies</a>.</p>
+
+  <h2><span>1.</span>Responsable del tratamiento</h2>
+  <dl>
+    <div><dt>Responsable</dt><dd><span class="ph">[NOMBRE O RAZÓN SOCIAL]</span></dd></div>
+    <div><dt>NIF/CIF</dt><dd><span class="ph">[NIF/CIF]</span></dd></div>
+    <div><dt>Domicilio</dt><dd><span class="ph">[DOMICILIO]</span></dd></div>
+    <div><dt>Correo electrónico</dt><dd><span class="ph">[EMAIL DE CONTACTO]</span></dd></div>
+    <div><dt>Sitio web</dt><dd><span class="ph">[DOMINIO]</span></dd></div>
+    <div><dt>Datos registrales</dt><dd><span class="ph">[DATOS REGISTRALES, SI PROCEDE]</span></dd></div>
+  </dl>
+
+  <h2><span>2.</span>Datos que se recogen y cuándo</h2>
+  <p>Solo se recogen los datos que el usuario introduce voluntariamente en estos formularios:</p>
+  <ul>
+    <li><strong>Formulario de contacto:</strong> nombre o estudio, correo electrónico, tipo de interés y mensaje.</li>
+    <li><strong>Formulario de interés en el curso:</strong> nombre y correo electrónico.</li>
+  </ul>
+  <p class="warn">Nota para el titular: actualmente los formularios no envían datos a ningún destino. Esta sección describe el tratamiento previsto y debe confirmarse cuando se active el envío.</p>
+  <p>Además, al visitar el sitio, los servidores de terceros que alojan o sirven recursos (véase la sección 6) pueden recibir la dirección IP del visitante y datos técnicos de la petición, como el navegador utilizado.</p>
+
+  <h2><span>3.</span>Finalidades y base jurídica</h2>
+  <ul>
+    <li><strong>Atender consultas y solicitudes de presupuesto</strong> enviadas por el formulario de contacto. Base: aplicación de medidas precontractuales a petición del interesado (art. 6.1.b RGPD) y, en su caso, el interés legítimo en responder a las comunicaciones recibidas (art. 6.1.f).</li>
+    <li><strong>Informar sobre el curso</strong> a quienes han manifestado interés en él. Base: consentimiento del interesado (art. 6.1.a RGPD), que se presta al enviar el formulario y puede retirarse en cualquier momento.</li>
+    <li><strong>Seguridad y funcionamiento técnico del sitio</strong>, incluido el tratamiento de direcciones IP al servir los recursos. Base: interés legítimo (art. 6.1.f RGPD).</li>
+  </ul>
+  <p>No se toman decisiones automatizadas ni se elaboran perfiles. No se enviarán comunicaciones comerciales sin una base jurídica válida (consentimiento, o relación previa conforme al art. 21 LSSI-CE).</p>
+
+  <h2><span>4.</span>Conservación</h2>
+  <ul>
+    <li>Consultas de contacto: el tiempo necesario para atenderlas y, después, bloqueadas durante los plazos legales de prescripción de posibles responsabilidades. Plazo orientativo: <span class="ph">[PLAZO, p. ej. 12 meses]</span>.</li>
+    <li>Interesados en el curso: hasta que se retire el consentimiento o, como máximo, <span class="ph">[PLAZO, p. ej. 24 meses]</span> desde el último contacto.</li>
+    <li>Si se formaliza un contrato, los datos se conservarán durante los plazos exigidos por la normativa fiscal y mercantil.</li>
+  </ul>
+
+  <h2><span>5.</span>Destinatarios y encargados del tratamiento</h2>
+  <p>Los datos no se cederán a terceros salvo obligación legal. Podrán acceder a ellos, como encargados del tratamiento, los proveedores que presten servicios al responsable, previo contrato conforme al art. 28 RGPD. <span class="ph">[Completar o suprimir según los proveedores reales.]</span></p>
+  <ul>
+    <li>Alojamiento web: <span class="ph">[PROVEEDOR DE ALOJAMIENTO]</span>.</li>
+    <li>Plataforma de pago y de cursos: <span class="ph">[PLATAFORMA DE PAGO / CURSOS, SI PROCEDE]</span>.</li>
+    <li>Servicio de correo electrónico o envío de comunicaciones: <span class="ph">[PROVEEDOR DE EMAIL, SI PROCEDE]</span>.</li>
+  </ul>
+
+  <h2><span>6.</span>Servicios de terceros que reciben la dirección IP</h2>
+  <p>Para mostrar el sitio, el navegador del visitante carga recursos desde servidores externos, que reciben su dirección IP y los datos técnicos de la petición:</p>
+  <ul>
+    <li><strong>Google Fonts</strong> (Google): tipografías.</li>
+    <li><strong>cdnjs</strong> (Cloudflare) y <strong>jsDelivr</strong>: bibliotecas JavaScript.</li>
+  </ul>
+  <p>Los vídeos incrustados se alojan en el propio sitio y no se cargan desde plataformas de terceros. Estos proveedores tratan los datos conforme a sus propias políticas de privacidad. <span class="ph">[Valorar alojar tipografías y bibliotecas en el propio servidor para evitar estas transferencias.]</span></p>
+
+  <h2><span>7.</span>Transferencias internacionales</h2>
+  <p>Algunos de los proveedores mencionados pueden estar establecidos fuera del Espacio Económico Europeo, en particular en Estados Unidos. Las garantías aplicables (decisión de adecuación de la Comisión Europea, cláusulas contractuales tipo u otras) <span class="ph">[A CONFIRMAR PARA CADA PROVEEDOR]</span>. Puede solicitar información adicional en <span class="ph">[EMAIL DE CONTACTO]</span>.</p>
+
+  <h2><span>8.</span>Derechos</h2>
+  <p>El interesado puede ejercer los siguientes derechos (arts. 15 a 22 RGPD):</p>
+  <ul>
+    <li><strong>Acceso:</strong> conocer qué datos se tratan.</li>
+    <li><strong>Rectificación:</strong> corregir datos inexactos.</li>
+    <li><strong>Supresión:</strong> solicitar que se eliminen los datos.</li>
+    <li><strong>Oposición:</strong> oponerse al tratamiento basado en el interés legítimo.</li>
+    <li><strong>Limitación:</strong> solicitar que se suspenda el tratamiento en los supuestos legales.</li>
+    <li><strong>Portabilidad:</strong> recibir los datos en formato estructurado y de uso común.</li>
+    <li><strong>Retirada del consentimiento</strong> en cualquier momento, sin que afecte a la licitud del tratamiento previo.</li>
+  </ul>
+  <p>Para ejercerlos, escriba a <span class="ph">[EMAIL DE CONTACTO]</span> o a <span class="ph">[DOMICILIO]</span>, indicando el derecho que ejerce y acompañando una copia de un documento que acredite su identidad. Se responderá en el plazo máximo de un mes.</p>
+
+  <h2><span>9.</span>Reclamación ante la AEPD</h2>
+  <p>Si considera que el tratamiento no se ajusta a la normativa, puede presentar una reclamación ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" rel="noopener" target="_blank">www.aepd.es</a>), C/ Jorge Juan, 6, 28001 Madrid. Se agradece contactar antes con el responsable para intentar resolverlo.</p>
+
+  <h2 id="cookies"><span>10.</span>Cookies</h2>
+  <p>A la fecha de esta versión, este sitio <strong>no instala cookies propias</strong> ni utiliza herramientas de analítica, publicidad o seguimiento. Por ello no se muestra banner de consentimiento. Los recursos de terceros descritos en la sección 6 se cargan sin que el sitio establezca cookies propias, pero reciben la dirección IP del visitante. <span class="ph">[Verificar con un escáner de cookies antes de publicar que esos recursos no instalan cookies.]</span></p>
+  <p class="warn">Nota para el titular: si se incorpora analítica (p. ej. Google Analytics), píxeles publicitarios, mapas, vídeos de terceros (YouTube, Vimeo) u otras incrustaciones que usen cookies o tecnologías similares, esta sección deberá actualizarse con un listado de cookies (nombre, titular, finalidad y duración) y deberá añadirse un banner que obtenga el consentimiento previo, con las opciones de aceptar y rechazar en el mismo nivel y la posibilidad de retirarlo, conforme al art. 22.2 LSSI-CE.</p>
+
+  <h2><span>11.</span>Seguridad y cambios</h2>
+  <p>Seguridad: <span class="ph">[DESCRIBIR LAS MEDIDAS TÉCNICAS Y ORGANIZATIVAS REALES, art. 32 RGPD]</span>. Esta política puede modificarse para adaptarla a cambios legales o del sitio; la versión vigente es la publicada en esta página.</p>
+  <p>Consulte también el <a href="aviso-legal.html">Aviso legal</a>.</p>
+</main>
+
+<footer>
+  <span>© 2026 ZENIT — Prototipo</span>
+  <nav aria-label="Enlaces del pie">
+    <a href="index.html">Inicio</a>
+    <a href="curso.html">Curso</a>
+    <a href="aviso-legal.html">Aviso legal</a>
+  </nav>
+</footer>
+</body>
+</html>

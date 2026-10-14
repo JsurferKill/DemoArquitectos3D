@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>De plano a render — Curso básico · ZENIT</title>
+<meta name="description" content="Curso básico en vídeo para arquitectos y estudiantes: del plano al render, la animación y una web con scroll, con un proyecto práctico por módulo. 6 módulos, 12 horas, 149 €.">
+<meta property="og:title" content="De plano a render — Curso básico · ZENIT">
+<meta property="og:description" content="Aprende a convertir un plano en renders, vídeo y una web con scroll. 6 módulos, 12 horas de vídeo y una práctica por módulo sobre el chalet Villa Alba.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0a09'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' text-anchor='middle' fill='%23cfa96d'%3EZ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0b0a09;
+    --panel: #141210;
+    --ink: #f3eee5;
+    --muted: #a39c90;
+    --line: rgba(243, 238, 229, 0.14);
+    --gold: #cfa96d;
+    --serif: "Instrument Serif", "Times New Roman", serif;
+    --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --gutter: clamp(20px, 5vw, 72px);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 400; margin: 0; line-height: 1.02; letter-spacing: -0.01em; }
+  h1 em, h2 em, h3 em { font-style: italic; color: var(--gold); }
+  p { margin: 0; }
+  video { display: block; }
+  figure { margin: 0; }
+
+  .eyebrow { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); display: inline-flex; align-items: center; gap: 12px; }
+  .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--gold); }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; border-radius: 999px;
+    border: 1px solid var(--line); font: 500 14px var(--sans); color: var(--ink); background: rgba(11,10,9,.35);
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); cursor: pointer; transition: background .25s, color .25s, border-color .25s;
+  }
+  .btn:hover { border-color: var(--gold); color: var(--gold); }
+  .btn.gold { background: var(--gold); border-color: var(--gold); color: #17120a; }
+  .btn.gold:hover { background: #e3c189; color: #17120a; }
+  .btn span { transition: transform .25s; }
+  .btn:hover span { transform: translateX(4px); }
+  :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+  /* Nav */
+  .nav { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px var(--gutter); transition: background .3s, border-color .3s; border-bottom: 1px solid transparent; }
+  .nav.scrolled { background: rgba(11,10,9,.72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-color: var(--line); }
+  .logo { font: 600 15px var(--sans); letter-spacing: .34em; }
+  .logo i { font-style: normal; color: var(--gold); }
+  .nav ul { display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; font-size: 13px; color: var(--muted); }
+  .nav ul a:hover { color: var(--ink); }
+  .nav .btn { padding: 9px 16px; font-size: 13px; }
+
+  /* Hero */
+  .hero { position: relative; min-height: 100vh; min-height: 100svh; display: flex; align-items: flex-end; padding: 120px var(--gutter) clamp(40px, 8vh, 90px); overflow: hidden; }
+  .hero video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,10,9,.55) 0%, rgba(11,10,9,0) 30%, rgba(11,10,9,.25) 55%, var(--bg) 100%), linear-gradient(90deg, rgba(11,10,9,.6), rgba(11,10,9,0) 60%); }
+  .hero-copy { position: relative; z-index: 2; max-width: 760px; }
+  .hero h1 { font-size: clamp(44px, 6.6vw, 104px); margin: 22px 0 22px; }
+  .hero p.lead { color: #d8d1c4; max-width: 50ch; margin-bottom: 28px; font-size: 17px; }
+  .facts { display: flex; flex-wrap: wrap; gap: 10px 28px; margin: 0 0 30px; padding: 18px 0 0; border-top: 1px solid var(--line); list-style: none; max-width: 560px; }
+  .facts li { font-size: 13px; color: var(--muted); }
+  .facts b { display: block; font: 400 34px/1 var(--serif); color: var(--ink); }
+
+  /* Sections */
+  section.block { padding: clamp(80px, 11vw, 160px) var(--gutter); }
+  .head { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; margin-bottom: clamp(36px, 5vw, 70px); }
+  .head h2 { font-size: clamp(40px, 5.2vw, 80px); max-width: 15ch; margin-top: 20px; }
+  .head p { color: var(--muted); max-width: 40ch; }
+
+  /* Para quién */
+  .who { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .card { padding: clamp(24px, 2.6vw, 36px); border: 1px solid var(--line); border-radius: 6px; background: var(--panel); }
+  .card i { font: italic 400 18px var(--serif); color: var(--gold); }
+  .card h3 { font-size: clamp(28px, 2.6vw, 38px); margin: 8px 0 12px; }
+  .card p { color: var(--muted); font-size: 15px; }
+
+  /* Temario */
+  .syllabus { border-top: 1px solid var(--line); }
+  details { border-bottom: 1px solid var(--line); }
+  summary { list-style: none; cursor: pointer; padding: 22px 0; font: 400 24px/1.2 var(--serif); display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; color: var(--gold); font-family: var(--sans); font-size: 20px; transition: transform .3s; flex: none; }
+  details[open] summary::after { transform: rotate(45deg); }
+  .mod summary { font-size: clamp(26px, 2.8vw, 38px); justify-content: flex-start; }
+  .mod summary .n { font: italic 400 22px var(--serif); color: var(--gold); min-width: 2ch; }
+  .mod summary .t { flex: 1; }
+  .mod summary .dur { font: 400 12px var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-left: auto; }
+  .mod-body { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(24px, 5vw, 70px); padding: 4px 0 34px 0; }
+  .mod-body small { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 10px; }
+  .mod-body ol { margin: 0; padding: 0; list-style: none; counter-reset: l; border-top: 1px solid var(--line); }
+  .mod-body li { counter-increment: l; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 15px; display: flex; gap: 14px; }
+  .mod-body li::before { content: counter(l, decimal-leading-zero); color: var(--muted); font-variant-numeric: tabular-nums; }
+  .mod-body .box { padding: 18px 20px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); }
+  .mod-body .box + .box { margin-top: 14px; }
+  .mod-body .box p { font-size: 15px; color: var(--ink); }
+  .mod-body .box.deliv p { color: var(--muted); }
+
+  /* Prácticas */
+  .reel { display: grid; grid-template-columns: minmax(0, 2.4fr) minmax(0, 1fr); gap: 20px; align-items: stretch; }
+  .clip { position: relative; border-radius: 6px; overflow: hidden; border: 1px solid var(--line); background: #000; }
+  .clip video { width: 100%; height: 100%; object-fit: cover; }
+  .clip.wide { aspect-ratio: 16 / 9; }
+  .clip figcaption { position: absolute; inset: auto 0 0 0; padding: 60px 22px 20px; background: linear-gradient(0deg, rgba(11,10,9,.85), rgba(11,10,9,0)); }
+  .clip figcaption small { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
+  .clip figcaption b { display: block; font: 400 26px var(--serif); margin-top: 4px; }
+  .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--gold); margin-top: clamp(36px, 5vw, 64px); }
+  .steps div { padding: 26px 24px 0 0; position: relative; }
+  .steps div::before { content: ""; position: absolute; top: -4px; left: 0; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
+  .steps small { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
+  .steps b { display: block; font: 400 28px/1.1 var(--serif); margin: 10px 0 8px; }
+  .steps p { font-size: 14px; color: var(--muted); max-width: 32ch; }
+
+  /* Incluye */
+  .offers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 1px solid var(--line); border-radius: 6px; }
+  .offers div { padding: 28px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .offers div:nth-child(3n) { border-right: 0; }
+  .offers div:nth-last-child(-n+3) { border-bottom: 0; }
+  .offers i { font: italic 400 18px var(--serif); color: var(--gold); }
+  .offers b { display: block; font: 400 26px/1.1 var(--serif); margin: 6px 0 8px; }
+  .offers p { font-size: 14px; color: var(--muted); }
+
+  /* Preguntas */
+  .faq { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: clamp(28px, 6vw, 90px); }
+  .faq h2 { font-size: clamp(40px, 5.2vw, 80px); margin-top: 20px; }
+  .faq-list { border-top: 1px solid var(--line); }
+  .faq-list details p { color: var(--muted); padding: 0 40px 24px 0; max-width: 60ch; }
+
+  /* CTA */
+  .contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); align-items: start; border-top: 1px solid var(--line); }
+  .contact h2 { font-size: clamp(44px, 5.6vw, 88px); margin: 20px 0 22px; }
+  .contact .info { color: var(--muted); max-width: 44ch; }
+  .price { font: 400 clamp(52px, 6vw, 88px)/1 var(--serif); color: var(--gold); margin: 26px 0 6px; }
+  .price small { font: 400 13px var(--sans); color: var(--muted); margin-left: 10px; }
+  .note { margin-top: 16px; font-size: 12px; color: var(--muted); }
+  form { display: grid; gap: 18px; }
+  label { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); display: grid; gap: 8px; }
+  input { font: 400 16px var(--sans); letter-spacing: 0; text-transform: none; color: var(--ink); background: transparent; border: 0; border-bottom: 1px solid var(--line); padding: 10px 0; border-radius: 0; outline: none; width: 100%; }
+  input:focus { border-color: var(--gold); }
+  .form-ok { color: var(--gold); font-size: 14px; min-height: 1.5em; }
+  footer { padding: 26px var(--gutter); border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--muted); }
+  footer nav { display: flex; gap: 20px; flex-wrap: wrap; }
+  footer a:hover { color: var(--ink); }
+
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  @media (max-width: 860px) {
+    .nav ul { display: none; }
+    .who, .contact, .faq, .reel, .mod-body, .steps { grid-template-columns: minmax(0, 1fr); }
+    .clip.tall { aspect-ratio: 9 / 14; }
+    .offers { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .offers div, .offers div:nth-child(3n), .offers div:nth-last-child(-n+3) { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .offers div:nth-child(2n) { border-right: 0; }
+    .offers div:nth-last-child(-n+2) { border-bottom: 0; }
+    .steps { row-gap: 30px; }
+    .mod summary .dur { display: none; }
+    .hero { padding-top: 100px; }
+  }
+  @media (max-width: 520px) {
+    .offers { grid-template-columns: minmax(0, 1fr); }
+    .offers div, .offers div:nth-child(2n), .offers div:nth-child(3n), .offers div:nth-last-child(-n+2), .offers div:nth-last-child(-n+3) { border-right: 0; border-bottom: 1px solid var(--line); }
+    .offers div:last-child { border-bottom: 0; }
+    .faq-list details p { padding-right: 0; }
+    summary { font-size: 21px; }
+    .mod summary { font-size: 24px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .btn, .btn span, summary::after { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="index.html" class="logo" aria-label="ZENIT, volver al inicio">ZEN<i>I</i>T</a>
+  <ul>
+    <li><a href="#temario">Temario</a></li>
+    <li><a href="#practicas">Prácticas</a></li>
+    <li><a href="#preguntas">Preguntas</a></li>
+    <li><a href="index.html#servicios">Para estudios</a></li>
+  </ul>
+  <a href="#apuntarme" class="btn gold">Apuntarme</a>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <video src="videos/v1.mp4" muted loop playsinline preload="metadata" aria-hidden="true" data-play></video>
+    <div class="hero-copy">
+      <span class="eyebrow">Curso básico</span>
+      <h1>De plano <em>a render</em>.</h1>
+      <p class="lead">Si sabes leer un plano, puedes aprender a convertirlo en imágenes, vídeo y una web con scroll. Seis módulos, un proyecto real y una práctica en cada paso.</p>
+      <ul class="facts">
+        <li><b>6</b>módulos</li>
+        <li><b>12 h</b>de vídeo</li>
+        <li><b>6</b>prácticas</li>
+        <li><b>149 €</b>pago único</li>
+      </ul>
+      <a href="#apuntarme" class="btn gold">Apuntarme <span>→</span></a>
+    </div>
+  </section>
+
+  <section class="block" id="para-quien">
+    <div class="head reveal">
+      <div>
+        <span class="eyebrow">Para quién es</span>
+        <h2>Para quien ya sabe de planos, <em>no de 3D</em>.</h2>
+      </div>
+      <p>No hace falta experiencia previa en modelado ni en render. Empezamos desde cero y vamos paso a paso.</p>
+    </div>
+    <div class="who">
+      <article class="card reveal"><i>01</i><h3>Arquitectos</h3><p>Quieres dejar de externalizar las imágenes de tus proyectos y presentar con material propio.</p></article>
+      <article class="card reveal" style="transition-delay:.08s"><i>02</i><h3>Estudiantes</h3><p>Necesitas imágenes y vídeo para entregas y portfolio, y te falta un método ordenado para llegar a ellos.</p></article>
+      <article class="card reveal" style="transition-delay:.16s"><i>03</i><h3>Quien parte de cero</h3><p>Sabes leer plantas, alzados y secciones. Con eso es suficiente para empezar el primer módulo.</p></article>
+    </div>
+  </section>
+
+  <section class="block" id="temario" style="padding-top:0">
+    <div class="head reveal">
+      <div>
+        <span class="eyebrow">Temario</span>
+        <h2>Seis módulos, <em>un solo proyecto</em>.</h2>
+      </div>
+      <p>Cada módulo combina vídeos explicativos con una práctica sobre Villa Alba, un chalet de 250 m² de una planta con piscina.</p>
+    </div>
+    <div class="syllabus reveal">
+
+      <details class="mod" open>
+        <summary><span class="n">1</span><span class="t">Del plano al 3D</span></summary>
+        <div class="mod-body">
+          <div><small>Lecciones</small>
+            <ol>
+              <li>Las etapas de un proyecto de visualización</li>
+              <li>Qué instalar y cómo organizar las carpetas</li>
+              <li>Limpiar y preparar plantas, alzados y secciones</li>
+              <li>Escala, unidades y puntos de referencia</li>
+            </ol>
+          </div>
+          <div>
+            <div class="box"><small>Práctica</small><p>Preparar los planos de Villa Alba.</p></div>
+            <div class="box deliv"><small>Entregable</small><p>Un juego de planos limpio, a escala y listo para modelar.</p></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="mod">
+        <summary><span class="n">2</span><span class="t">Modelado</span></summary>
+        <div class="mod-body">
+          <div><small>Lecciones</small>
+            <ol>
+              <li>Moverse por el espacio de trabajo de tu programa de modelado</li>
+              <li>Muros, forjados y cubierta a partir del plano</li>
+              <li>Huecos: puertas y ventanas</li>
+              <li>Organización por capas y revisión del volumen</li>
+            </ol>
+          </div>
+          <div>
+            <div class="box"><small>Práctica</small><p>Levantar el volumen del chalet.</p></div>
+            <div class="box deliv"><small>Entregable</small><p>El modelo de Villa Alba con la piscina y su entorno inmediato.</p></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="mod">
+        <summary><span class="n">3</span><span class="t">Materiales e iluminación</span></summary>
+        <div class="mod-body">
+          <div><small>Lecciones</small>
+            <ol>
+              <li>Cómo se comporta un material: color, rugosidad y reflejo</li>
+              <li>Aplicar y escalar texturas sobre el modelo</li>
+              <li>Luz natural: orientación, hora y cielo</li>
+              <li>Luz artificial y ambiente de atardecer</li>
+            </ol>
+          </div>
+          <div>
+            <div class="box"><small>Práctica</small><p>El salón al atardecer.</p></div>
+            <div class="box deliv"><small>Entregable</small><p>Una vista interior con materiales y luz resueltos.</p></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="mod">
+        <summary><span class="n">4</span><span class="t">Render con IA</span></summary>
+        <div class="mod-body">
+          <div><small>Lecciones</small>
+            <ol>
+              <li>Qué aporta la IA al render y qué sigue haciendo el modelo</li>
+              <li>Encuadres y vistas de referencia para guiar el resultado</li>
+              <li>Escribir instrucciones claras y controlar las variaciones</li>
+              <li>Retoque final y exportación en alta resolución</li>
+            </ol>
+          </div>
+          <div>
+            <div class="box"><small>Práctica</small><p>De la maqueta a tres renders finales.</p></div>
+            <div class="box deliv"><small>Entregable</small><p>Tres imágenes finales de Villa Alba, dos de exterior y una de interior.</p></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="mod">
+        <summary><span class="n">5</span><span class="t">Animación y vídeo</span></summary>
+        <div class="mod-body">
+          <div><small>Lecciones</small>
+            <ol>
+              <li>Planificar un recorrido: ritmo, cámara y duración</li>
+              <li>Animar la cámara por el modelo</li>
+              <li>Generar el vídeo a partir de las imágenes</li>
+              <li>Reencuadrar y montar la versión vertical</li>
+            </ol>
+          </div>
+          <div>
+            <div class="box"><small>Práctica</small><p>Un recorrido horizontal y su versión vertical.</p></div>
+            <div class="box deliv"><small>Entregable</small><p>Dos vídeos exportados, uno en 16:9 y otro en 9:16.</p></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="mod">
+        <summary><span class="n">6</span><span class="t">Web con scroll y publicación</span></summary>
+        <div class="mod-body">
+          <div><small>Lecciones</small>
+            <ol>
+              <li>Estructura de una web de proyecto</li>
+              <li>Vídeo e imágenes que cambian con el scroll</li>
+              <li>Ficha de datos y formulario de contacto</li>
+              <li>Publicar la web y revisarla en móvil</li>
+            </ol>
+          </div>
+          <div>
+            <div class="box"><small>Práctica final</small><p>Tu propio proyecto publicado.</p></div>
+            <div class="box deliv"><small>Entregable</small><p>Una web con tu proyecto, accesible con un enlace público.</p></div>
+          </div>
+        </div>
+      </details>
+
+    </div>
+    <p class="note">Duraciones y contenidos orientativos; pueden ajustarse antes de abrir las inscripciones.</p>
+  </section>
+
+  <section class="block" id="practicas" style="padding-top:0">
+    <div class="head reveal">
+      <div>
+        <span class="eyebrow">Prácticas</span>
+        <h2>Aprendes <em>haciendo</em> un proyecto.</h2>
+      </div>
+      <p>Esto es lo que sabrás hacer al terminar: un recorrido para presentar y una pieza vertical para redes, a partir de tus propios planos.</p>
+    </div>
+    <div class="reel">
+      <figure class="clip wide reveal">
+        <video src="videos/v2.mp4" muted loop playsinline preload="metadata" aria-hidden="true" data-play></video>
+        <figcaption><small>Recorrido horizontal</small><b>A pie de piscina, entre las torres</b></figcaption>
+      </figure>
+      <figure class="clip tall reveal" style="transition-delay:.1s">
+        <video src="videos/v3.mp4" muted loop playsinline preload="metadata" aria-hidden="true" data-play></video>
+        <figcaption><small>Versión vertical</small><b>Lista para redes</b></figcaption>
+      </figure>
+    </div>
+    <div class="steps reveal">
+      <div><small>Idea</small><b>Un proyecto, seis pasos</b><p>Villa Alba crece con cada módulo: del plano al modelo, de las imágenes al vídeo y a la web.</p></div>
+      <div><small>Método</small><b>Una práctica por módulo</b><p>Primero ves los vídeos explicativos y después aplicas lo aprendido en la práctica del módulo.</p></div>
+      <div><small>Final</small><b>Después, el tuyo</b><p>En el último módulo repites el recorrido completo con un proyecto propio y lo publicas.</p></div>
+    </div>
+  </section>
+
+  <section class="block" id="incluye" style="padding-top:0">
+    <div class="head reveal">
+      <div>
+        <span class="eyebrow">Qué incluye</span>
+        <h2>Lo necesario <em>para practicar</em>.</h2>
+      </div>
+    </div>
+    <div class="offers reveal">
+      <div><i>01</i><b>12 horas de vídeo</b><p>Lecciones cortas, repartidas en seis módulos.</p></div>
+      <div><i>02</i><b>Archivos de partida</b><p>Los planos y recursos de Villa Alba para empezar cada práctica.</p></div>
+      <div><i>03</i><b>Seis prácticas</b><p>Una por módulo, con un entregable concreto.</p></div>
+      <div><i>04</i><b>Solución de cada práctica</b><p>Compara tu resultado con el nuestro y corrígete tú mismo.</p></div>
+      <div><i>05</i><b>Orden claro</b><p>Cada módulo parte del resultado del anterior.</p></div>
+      <div><i>06</i><b>Acceso sin caducidad</b><p>Vuelve a las lecciones cuando las necesites.</p></div>
+    </div>
+  </section>
+
+  <section class="block faq" id="preguntas" style="padding-top:0">
+    <div class="reveal">
+      <span class="eyebrow">Preguntas</span>
+      <h2>Antes de <em>apuntarte</em>.</h2>
+    </div>
+    <div class="faq-list reveal">
+      <details open><summary>¿Qué necesito para empezar?</summary><p>Saber leer un plano y un ordenador con espacio libre. No hace falta experiencia en 3D: el primer módulo explica el flujo de trabajo y qué preparar.</p></details>
+      <details><summary>¿Qué programas necesito?</summary><p>En el módulo 1 te explicamos qué instalar y cómo configurarlo. Además, señalamos las alternativas gratuitas allí donde existen.</p></details>
+      <details><summary>¿Cuánto tiempo me llevará?</summary><p>El material en vídeo suma unas 12 horas. Con las prácticas, cuenta con bastante más; depende de tu ritmo y de tu equipo. Como el acceso no caduca, puedes avanzar a tu paso.</p></details>
+      <details><summary>¿Para quién no es?</summary><p>No es un curso avanzado. Si ya trabajas a diario con modelado y render, probablemente verás cosas que ya conoces. Tampoco sustituye a un encargo: si prefieres delegarlo, consulta el servicio para estudios.</p></details>
+      <details><summary>¿Puedo pedir factura?</summary><p>Sí. Cuando abramos las inscripciones podrás indicar tus datos fiscales y recibirás la factura de tu compra.</p></details>
+    </div>
+  </section>
+
+  <section class="block contact" id="apuntarme">
+    <div class="reveal">
+      <span class="eyebrow">Inscripciones próximamente</span>
+      <h2>Empieza <em>por el plano</em>.</h2>
+      <p class="info">Todavía no hay pago habilitado. Déjanos tu email y te avisaremos cuando abramos inscripciones; no te pedimos nada más.</p>
+      <div class="price">149 € <small>pago único · precio orientativo</small></div>
+      <p class="note">Un solo pago, sin suscripción. Precio y contenidos orientativos hasta que abra la inscripción.</p>
+    </div>
+    <form id="form" class="reveal">
+      <label>Nombre<input name="nombre" required autocomplete="given-name"></label>
+      <label>Email<input name="email" type="email" required autocomplete="email"></label>
+      <div><button class="btn gold" type="submit">Quiero apuntarme <span>→</span></button></div>
+      <p class="form-ok" id="formOk" role="status"></p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 ZENIT — Prototipo</span>
+  <span>Instagram · LinkedIn</span>
+  <nav aria-label="Pie de página">
+    <a href="index.html">Inicio</a>
+    <a href="aviso-legal.html">Aviso legal</a>
+    <a href="privacidad.html">Privacidad</a>
+  </nav>
+</footer>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', scrollY > 40);
+  addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* Reveal */
+  const rev = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    rev.forEach(e => e.classList.add('in'));
+  } else {
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }), { threshold: 0.12 });
+    rev.forEach(e => io.observe(e));
+  }
+
+  /* Vídeos: solo se reproducen mientras están a la vista */
+  const vids = document.querySelectorAll('video[data-play]');
+  if (!reduce && 'IntersectionObserver' in window) {
+    const vo = new IntersectionObserver(es => es.forEach(e => {
+      const v = e.target;
+      if (e.isIntersecting) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
+      else v.pause();
+    }), { threshold: 0.25 });
+    vids.forEach(v => vo.observe(v));
+  }
+
+  /* Formulario de prototipo: no envía nada */
+  const form = document.getElementById('form');
+  const ok = document.getElementById('formOk');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    ok.textContent = 'Gracias. Te avisaremos cuando abramos inscripciones. (Prototipo: no se ha enviado nada.)';
+    form.reset();
+  });
+})();
+</script>
+</body>
+</html>

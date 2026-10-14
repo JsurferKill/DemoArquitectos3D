@@ -581,7 +581,8 @@
   const heroVideo = document.querySelector('.hero video');
   if (heroVideo.readyState >= 3) videoReady(); else { heroVideo.addEventListener('canplay', videoReady); heroVideo.addEventListener('error', videoReady); }
   if (document.readyState === 'complete') pageReady(); else addEventListener('load', pageReady);
-  setTimeout(() => { tasksDone = TASKS; finishLoad(); }, 7000);     // nunca dejar la web bloqueada si algo no carga
+  setTimeout(() => { tasksDone = TASKS; finishLoad(); }, 7000);
+  if (/[?&]at=/.test(location.search)) tasksDone = TASKS;                      // ?at=: captura directa, sin pantalla de carga     // nunca dejar la web bloqueada si algo no carga
 
   const countUp = el => {
     const target = +el.dataset.count, t0 = performance.now();
@@ -952,6 +953,9 @@
   addEventListener('pointermove', e => { mx = e.clientX / innerWidth - 0.5; my = e.clientY / innerHeight - 0.5; });
   new IntersectionObserver(([e]) => { visible = e.isIntersecting; }).observe(tour);
   resize();
+  // ?at=0..1: abre la página ya situada en ese punto del recorrido (para capturas de presentación)
+  const AT = parseFloat(new URLSearchParams(location.search).get('at'));
+  if (!isNaN(AT)) setTimeout(() => scrollTo(0, tour.offsetTop + AT * (tour.offsetHeight - innerHeight)), 300);
 
   /* --- Planta acotada (vista cenital) y minimapa --- */
   /* --- Renders de acabado: se funden sobre el 3D cuando la cámara se detiene en cada parada --- */

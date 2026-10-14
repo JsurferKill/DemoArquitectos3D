@@ -1,0 +1,93 @@
+{
+  "title": "VILLA ALBA — ÚLTIMO REFUGIO",
+  "format": { "aspect_ratio": "16:9", "resolution": "1080p", "fps": 30, "duration_s": 56 },
+  "asset_base_url": "https://raw.githubusercontent.com/JsurferKill/DemoArquitectos3D/main/",
+  "style": {
+    "palette": { "background": "#0b0a09", "text": "#f3eee5", "accent": "#cfa96d", "alarm": "#c8352b" },
+    "fonts": { "titles": "Inter, uppercase, wide tracking", "hud": "thin monospace" },
+    "look": "dystopian near-future city in cold desaturated teal and ash, film grain, subtle chromatic aberration, thin scan lines, drone telemetry HUD; the house is the only warm, sharp, golden-hour element",
+    "rules": [
+      "keep the house, architecture, materials, furniture and camera paths exactly as in the assets",
+      "no people, no faces, no third-party logos, no invented text",
+      "transitions: glitch cuts, scan-line wipes from massing to render, whip pans, flash frames, short speed ramps"
+    ]
+  },
+  "shots": [
+    {
+      "id": 1, "start": 0, "end": 4, "name": "Señal",
+      "assets": ["videos/v1.mp4"],
+      "prompt": "Black screen with digital noise, a thin red scan line sweeps across, the tower maquette appears heavily desaturated through interference.",
+      "transition_out": "hard cut",
+      "text": "2049. LAS CIUDADES YA NO SE DIBUJAN."
+    },
+    {
+      "id": 2, "start": 4, "end": 9, "name": "La ciudad",
+      "assets": ["videos/v2.mp4", "videos/v3.mp4"],
+      "prompt": "Brutalist towers in toxic haze and drifting dust, cold teal and ash grade, slow push in then speed ramp.",
+      "transition_out": "2-frame white flash",
+      "text": "SE GENERAN."
+    },
+    {
+      "id": 3, "start": 9, "end": 14, "name": "Revelación",
+      "assets": ["renders/maqueta/01-cenital.jpg", "renders/final/01-cenital.webp"],
+      "prompt": "Top-down view of the grey 3D massing of Villa Alba; a horizontal scan line with a HUD grid wipes across and turns it into the photoreal golden-hour render; coordinates and plot size tick on screen.",
+      "transition_out": "scan-line wipe",
+      "text": "VILLA ALBA · 250 m²"
+    },
+    {
+      "id": 4, "start": 14, "end": 22, "name": "Descenso",
+      "assets": ["renders/video/t1-cenital-fachada.mp4"],
+      "prompt": "Use the clip as is: drone descends from above to eye level in front of the glazed facade; overlay altitude counting down and heading; slow ramp on arrival.",
+      "transition_out": "match cut on motion",
+      "text": "ÚLTIMO REFUGIO"
+    },
+    {
+      "id": 5, "start": 22, "end": 30, "name": "Entrada",
+      "assets": ["renders/video/t2-fachada-entrada.mp4", "renders/video/t3-entrada-salon.mp4"],
+      "prompt": "Use the clips as is and join them: glide over the pool to the open oak door, then through the hall into the living room; a burst of warm light when crossing the door, the grain and HUD fade out inside.",
+      "transition_out": "whip pan",
+      "text": "SALÓN · 94 m²"
+    },
+    {
+      "id": 6, "start": 30, "end": 36, "name": "Estancias",
+      "assets": ["renders/final/06-cocina.webp", "renders/final/07-suite.webp", "renders/final/08-bano.webp", "renders/final/09-dormitorio.webp", "renders/final/10-piscina.webp"],
+      "prompt": "Rapid sequence of the rooms, 0.8 to 1.2 seconds each, slight camera push on every still, whip transitions between them.",
+      "transition_out": "glitch cut",
+      "text": "COCINA · SUITE · BAÑO · DORMITORIOS · PISCINA"
+    },
+    {
+      "id": 7, "start": 36, "end": 41, "name": "Ficha",
+      "assets": ["renders/final/11-aerea.webp"],
+      "prompt": "Aerial three-quarter view of the property, slow orbit feel; data types in like a terminal with flickering digits.",
+      "transition_out": "cut to black for 4 frames",
+      "text": "1.180.000 € · 3 DORMITORIOS · 2 BAÑOS · ENERGÍA A"
+    },
+    {
+      "id": 8, "start": 41, "end": 47, "name": "La web",
+      "assets": ["presentacion/grabaciones/web-recorrido.mp4"],
+      "pending": "grabar la pantalla de la web haciendo scroll por el recorrido (ver KATANA.md, 4.3)",
+      "prompt": "The screen recording plays on a laptop on a dark desk in a dim concrete room, soft reflection on the screen, product framing, slow dolly.",
+      "transition_out": "flash frame",
+      "text": "TU PROYECTO, RECORRIDO EN LA WEB"
+    },
+    {
+      "id": 9, "start": 47, "end": 52, "name": "El curso",
+      "assets": [
+        "renders/maqueta/02-fachada.jpg", "renders/final/02-fachada.webp",
+        "renders/maqueta/05-salon.jpg", "renders/final/05-salon.webp",
+        "renders/maqueta/07-suite.jpg", "renders/final/07-suite.webp",
+        "renders/maqueta/10-piscina.jpg", "renders/final/10-piscina.webp"
+      ],
+      "prompt": "Strobing before and after: each grey massing view flips to its photoreal render, 0.3 seconds per pair, accelerating.",
+      "transition_out": "glitch to black",
+      "text": "DE PLANO A RENDER · CURSO · 6 MÓDULOS"
+    },
+    {
+      "id": 10, "start": 52, "end": 56, "name": "Cierre",
+      "assets": [],
+      "prompt": "Black background with fine grain; the ZENIT wordmark (letter I in gold) glitches in and then holds perfectly still.",
+      "transition_out": "end",
+      "text": "ZENIT · RENDERS Y RECORRIDOS CON IA PARA ESTUDIOS"
+    }
+  ]
+}

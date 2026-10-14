@@ -103,6 +103,12 @@ Pendiente (al no haber planos reales, se decide sobre nuestro propio diseño):
 
 - [ ] Los dormitorios 2 y 3 y el baño 2 abren directamente al salón; falta un pasillo o distribuidor. Supone redistribuir la planta y rehacer el recorrido.
 
+## Vídeo de presentación
+
+- [x] Paquete para Katana en `presentacion/`: guion plano a plano, prompt maestro, textos, recursos y sonido (`KATANA.md`) y el mismo guion en formato máquina (`guion.json`).
+- [ ] Grabar la pantalla de la web con el recorrido y la página del curso (`presentacion/grabaciones/`).
+- [ ] Enlazar el conector de Higgsfield con la cuenta Plus (desde una ventana de incógnito) y pedir el coste exacto de Katana antes de generar.
+
 ## Decisiones abiertas
 
 1. ¿Con qué herramientas se hacen hoy el modelo y los renders?
